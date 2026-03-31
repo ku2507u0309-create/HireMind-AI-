@@ -1,4 +1,0 @@
-{
-  "buildCommand": "pnpm -r --if-present run build:skip-bindings && rm -rf dist && mv src/frontend/dist dist",
-  "outputDirectory": "dist"
-}
