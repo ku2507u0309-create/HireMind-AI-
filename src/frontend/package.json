@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build:skip-bindings": "vite build && pnpm copy:env && node -e \"const fs = require('fs'); fs.rmSync('../../dist', {recursive: true, force: true}); fs.cpSync('dist', '../../dist', {recursive: true, force: true})\"",
-    "build": "vite build && pnpm copy:env && node -e \"const fs = require('fs'); fs.rmSync('../../dist', {recursive: true, force: true}); fs.cpSync('dist', '../../dist', {recursive: true, force: true})\"",
+    "build:skip-bindings": "vite build && pnpm copy:env",
+    "build": "vite build && pnpm copy:env",
     "copy:env": "node -e \"const fs = require('fs'); if (!fs.existsSync('dist')) fs.mkdirSync('dist'); fs.copyFileSync('env.json', 'dist/env.json')\"",
     "typecheck": "tsc --noEmit --incremental --tsBuildInfoFile node_modules/.cache/tsconfig.tsbuildinfo --pretty",
     "check": "biome check src",

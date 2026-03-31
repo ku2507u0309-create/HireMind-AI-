@@ -1,4 +1,4 @@
 {
-  "buildCommand": "pnpm --filter '@caffeine/template-frontend' build:skip-bindings && rm -rf dist && cp -r src/frontend/dist dist",
+  "buildCommand": "pnpm -r --if-present run build:skip-bindings && rm -rf dist && mv src/frontend/dist dist",
   "outputDirectory": "dist"
 }
