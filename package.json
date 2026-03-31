@@ -6,7 +6,7 @@
     "pnpm": ">=10.0.0"
   },
   "scripts": {
-    "build": "pnpm -r --if-present run build",
+    "build": "pnpm -r --if-present run build && rm -rf dist && mv src/frontend/dist dist",
     "dev": "pnpm --filter '@caffeine/template-frontend' dev",
     "typecheck": "pnpm -r --if-present run typecheck",
     "check": "pnpm -r --if-present run check",
